@@ -1,17 +1,19 @@
-const { Pool } = require('pg');
+const Sequelize = require('sequelize');
 
-const {
-  DATABASE_DB,
-  DATABASE_HOST,
-  DATABASE_PASSWORD,
-  DATABASE_PORT,
-  DATABASE_USER,
-} = require('../env');
+const config = require('./config');
 
-module.exports = new Pool({
-  user: DATABASE_USER,
-  password: DATABASE_PASSWORD,
-  host: DATABASE_HOST,
-  port: DATABASE_PORT,
-  database: DATABASE_DB,
-});
+const models = [];
+
+const init = () => {
+  const connection = new Sequelize(config);
+
+  models
+    .map(model => model.init(connection))
+    .map(model => model.associate && model.associate(connection.models));
+};
+
+module.exports = {
+  Database: {
+    init,
+  },
+};

@@ -4,7 +4,9 @@
   "scripts": {
     "start": "node src/main.js",
     "dev": "nodemon src/main.js",
-    "test": "jest --coverage"
+    "test": "jest --coverage",
+    "migration:run": "sequelize db:migrate",
+    "migration:undo": "sequelize db:migrate:undo"
   },
   "dependencies": {
     "cors": "^2.8.5",
@@ -13,7 +15,9 @@
     "express-async-errors": "^3.1.1",
     "express-pino-logger": "^5.0.0",
     "pg": "^8.0.3",
+    "pg-hstore": "^2.3.3",
     "pino": "^6.2.1",
+    "sequelize": "^5.21.9",
     "yup": "^0.28.5"
   },
   "devDependencies": {
@@ -26,6 +30,7 @@
     "jest": "^26.0.1",
     "nodemon": "^2.0.3",
     "prettier": "^2.0.5",
+    "sequelize-cli": "^5.5.1",
     "supertest": "^4.0.2"
   }
 }

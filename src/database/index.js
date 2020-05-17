@@ -1,8 +1,9 @@
 const Sequelize = require('sequelize');
 
 const config = require('./config');
+const { Book } = require('../app/book');
 
-const models = [];
+const models = [Book];
 
 const init = () => {
   const connection = new Sequelize(config);

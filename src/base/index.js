@@ -1,3 +1,4 @@
 const { BaseService } = require('./service');
+const { BaseController } = require('./controller');
 
-module.exports = { BaseService };
+module.exports = { BaseService, BaseController };

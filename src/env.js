@@ -8,4 +8,5 @@ module.exports = {
   DATABASE_HOST: process.env.DATABASE_HOST,
   DATABASE_PORT: process.env.DATABASE_PORT,
   DATABASE_DB: process.env.DATABASE_DB,
+  DATABASE_DIALECT: process.env.DATABASE_DIALECT,
 };

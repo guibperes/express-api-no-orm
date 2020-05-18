@@ -6,7 +6,7 @@
   "collectCoverageFrom": [
     "src/**/*.js",
     "!src/*.js",
-    "!src/database/*.js",
+    "!src/database/**/*.js",
     "!src/middlewares/error.js"
   ]
 }

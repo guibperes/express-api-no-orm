@@ -15,6 +15,7 @@ const init = () => {
 
 module.exports = {
   Database: {
+    models,
     init,
   },
 };
